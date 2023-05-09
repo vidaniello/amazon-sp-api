@@ -25,12 +25,23 @@ public class LWAAuthorizationSigner {
             tokenRequestGrantType = "refresh_token";
         }
 
+        
+        
+        /*
         lwaAccessTokenRequestMeta = LWAAccessTokenRequestMeta.builder()
                 .clientId(lwaAuthorizationCredentials.getClientId())
                 .clientSecret(lwaAuthorizationCredentials.getClientSecret())
                 .refreshToken(lwaAuthorizationCredentials.getRefreshToken())
                 .grantType(tokenRequestGrantType).scopes(lwaAuthorizationCredentials.getScopes())
                 .build();
+                */
+        
+        lwaAccessTokenRequestMeta = new LWAAccessTokenRequestMeta();
+        lwaAccessTokenRequestMeta.setClientId(lwaAuthorizationCredentials.getClientId());
+        lwaAccessTokenRequestMeta.setClientSecret(lwaAuthorizationCredentials.getClientSecret());
+        lwaAccessTokenRequestMeta.setRefreshToken(lwaAuthorizationCredentials.getRefreshToken());
+        lwaAccessTokenRequestMeta.setGrantType(tokenRequestGrantType);
+        lwaAccessTokenRequestMeta.setScopes(lwaAuthorizationCredentials.getScopes());
     }
 
      /**

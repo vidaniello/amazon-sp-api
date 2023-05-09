@@ -20,4 +20,28 @@ public class AWSAuthenticationCredentialsProvider {
     private String roleSessionName;
 
     private String region;
+    
+    public String getRegion() {
+		return region;
+	}
+    
+    public String getRoleArn() {
+		return roleArn;
+	}
+    
+    public String getRoleSessionName() {
+		return roleSessionName;
+	}
+    
+    public void setRegion(String region) {
+		this.region = region;
+	}
+    
+    public void setRoleArn(String roleArn) {
+		this.roleArn = roleArn;
+	}
+    
+    public void setRoleSessionName(String roleSessionName) {
+		this.roleSessionName = roleSessionName;
+	}
 }

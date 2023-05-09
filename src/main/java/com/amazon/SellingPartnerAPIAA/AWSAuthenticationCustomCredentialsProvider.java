@@ -20,4 +20,20 @@ public class AWSAuthenticationCustomCredentialsProvider {
      * AWS Credentials Provider
      */
     private AWSCredentialsProvider awsCredentialsProvider;
+    
+    public AWSCredentialsProvider getAwsCredentialsProvider() {
+		return awsCredentialsProvider;
+	}
+    
+    public String getRegion() {
+		return region;
+	}
+    
+    public void setAwsCredentialsProvider(AWSCredentialsProvider awsCredentialsProvider) {
+		this.awsCredentialsProvider = awsCredentialsProvider;
+	}
+    
+    public void setRegion(String region) {
+		this.region = region;
+	}
 }

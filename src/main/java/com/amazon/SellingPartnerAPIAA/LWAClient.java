@@ -8,6 +8,8 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.Response;
+import com.squareup.okhttp.ResponseBody;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -58,13 +60,17 @@ class LWAClient {
 
         String accessToken;
         try {
-            Response response = okHttpClient.newCall(accessTokenRequest).execute();
+        	Response response = okHttpClient.newCall(accessTokenRequest).execute();
             if (!response.isSuccessful()) {
                 throw new IOException("Unsuccessful LWA token exchange");
             }
-
-            JsonObject responseJson = new JsonParser().parse(response.body().string()).getAsJsonObject();
-
+            JsonObject responseJson = null;
+            try(ResponseBody rb = response.body()){
+            
+            	//JsonObject responseJson = new JsonParser().parse(response.body().string()).getAsJsonObject();
+            	responseJson = JsonParser.parseString(rb.string()).getAsJsonObject();
+            }
+            
             accessToken = responseJson.get(ACCESS_TOKEN_KEY).getAsString();
             if (lwaAccessTokenCache != null) {
                 long timeToTokenexpiry = responseJson.get(ACCESS_TOKEN_EXPIRES_IN).getAsLong();

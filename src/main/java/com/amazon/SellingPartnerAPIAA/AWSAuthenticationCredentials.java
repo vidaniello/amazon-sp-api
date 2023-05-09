@@ -27,4 +27,28 @@ public class AWSAuthenticationCredentials {
      */
     @NonNull
     private String region;
+    
+    public String getAccessKeyId() {
+		return accessKeyId;
+	}
+    
+    public String getRegion() {
+		return region;
+	}
+    
+    public String getSecretKey() {
+		return secretKey;
+	}
+    
+    public void setAccessKeyId(String accessKeyId) {
+		this.accessKeyId = accessKeyId;
+	}
+    
+    public void setRegion(String region) {
+		this.region = region;
+	}
+    
+    public void setSecretKey(String secretKey) {
+		this.secretKey = secretKey;
+	}
 }

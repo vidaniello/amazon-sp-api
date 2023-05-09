@@ -5,6 +5,7 @@ import com.google.gson.annotations.JsonAdapter;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @AllArgsConstructor
@@ -12,9 +13,18 @@ import java.util.Set;
 @JsonAdapter(LWAClientScopesSerializerDeserializer.class)
 public class LWAClientScopes {
 
-    private final Set<String> scopes;
+    private Set<String> scopes;
 
-    protected void addScope(String scope) {
+    public LWAClientScopes() {
+		
+	}
+    
+    public LWAClientScopes(Set<String> scopes) {
+		super();
+		this.scopes = scopes;
+	}
+
+	protected void addScope(String scope) {
         scopes.add(scope);
 
     }
@@ -23,5 +33,8 @@ public class LWAClientScopes {
         return scopes.isEmpty();
     }
 
+    public Set<String> getScopes() {
+		return scopes;
+	}
 
 }
