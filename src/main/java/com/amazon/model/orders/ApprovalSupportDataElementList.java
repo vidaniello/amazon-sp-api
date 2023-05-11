@@ -24,7 +24,7 @@ import java.util.List;
  * List of additional data elements supporting the approval process. Check the applicable restrictions at the specific approval type schemas.
  */
 @ApiModel(description = "List of additional data elements supporting the approval process. Check the applicable restrictions at the specific approval type schemas.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-09T15:23:39.079+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-11T14:53:04.283+02:00")
 public class ApprovalSupportDataElementList extends ArrayList<ApprovalSupportDataElement> {
 
   @Override

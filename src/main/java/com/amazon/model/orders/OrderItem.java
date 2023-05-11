@@ -38,7 +38,7 @@ import java.util.List;
  * A single order item.
  */
 @ApiModel(description = "A single order item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-09T15:23:39.079+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-11T14:53:04.283+02:00")
 public class OrderItem {
   @SerializedName("ASIN")
   private String ASIN = null;

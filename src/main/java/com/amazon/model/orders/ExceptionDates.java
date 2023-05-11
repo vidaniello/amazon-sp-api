@@ -31,7 +31,7 @@ import java.util.List;
  * Dates when the business is closed or open with a different time window.
  */
 @ApiModel(description = "Dates when the business is closed or open with a different time window.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-09T15:23:39.079+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-11T14:53:04.283+02:00")
 public class ExceptionDates {
   @SerializedName("ExceptionDate")
   private String exceptionDate = null;

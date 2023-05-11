@@ -31,7 +31,7 @@ import java.util.List;
  * Tax information about the marketplace.
  */
 @ApiModel(description = "Tax information about the marketplace.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-09T15:23:39.079+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-11T14:53:04.283+02:00")
 public class MarketplaceTaxInfo {
   @SerializedName("TaxClassifications")
   private List<TaxClassification> taxClassifications = null;

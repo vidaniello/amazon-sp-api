@@ -28,7 +28,7 @@ import java.io.IOException;
  * Detailed information about an Amazon market where a seller can list items for sale and customers can view and purchase items.
  */
 @ApiModel(description = "Detailed information about an Amazon market where a seller can list items for sale and customers can view and purchase items.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-09T15:23:44.639+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-11T14:53:35.376+02:00")
 public class Marketplace {
   @SerializedName("id")
   private String id = null;

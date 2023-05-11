@@ -29,7 +29,7 @@ import java.io.IOException;
  * Information about a sub-payment method used to pay for a COD order.
  */
 @ApiModel(description = "Information about a sub-payment method used to pay for a COD order.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-09T15:23:39.079+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-11T14:53:04.283+02:00")
 public class PaymentExecutionDetailItem {
   @SerializedName("Payment")
   private Money payment = null;

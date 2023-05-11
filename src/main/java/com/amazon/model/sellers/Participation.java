@@ -28,7 +28,7 @@ import java.io.IOException;
  * Detailed information that is specific to a seller in a Marketplace.
  */
 @ApiModel(description = "Detailed information that is specific to a seller in a Marketplace.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-09T15:23:44.639+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-11T14:53:35.376+02:00")
 public class Participation {
   @SerializedName("isParticipating")
   private Boolean isParticipating = null;

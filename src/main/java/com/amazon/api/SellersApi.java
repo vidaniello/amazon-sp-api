@@ -13,15 +13,15 @@
 
 package com.amazon.api;
 
-import com.amazon.ApiCallback;
-import com.amazon.ApiClient;
-import com.amazon.ApiException;
-import com.amazon.ApiResponse;
-import com.amazon.Configuration;
-import com.amazon.Pair;
-import com.amazon.ProgressRequestBody;
-import com.amazon.ProgressResponseBody;
-import com.amazon.StringUtil;
+import com.amazon.invoker.ApiCallback;
+import com.amazon.invoker.ApiClient;
+import com.amazon.invoker.ApiException;
+import com.amazon.invoker.ApiResponse;
+import com.amazon.invoker.Configuration;
+import com.amazon.invoker.Pair;
+import com.amazon.invoker.ProgressRequestBody;
+import com.amazon.invoker.ProgressResponseBody;
+import com.amazon.invoker.StringUtil;
 
 import com.google.gson.reflect.TypeToken;
 

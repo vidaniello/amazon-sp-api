@@ -31,7 +31,7 @@ import java.util.List;
  * Business days and hours when the destination is open for deliveries.
  */
 @ApiModel(description = "Business days and hours when the destination is open for deliveries.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-09T15:23:39.079+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-11T14:53:04.283+02:00")
 public class BusinessHours {
   /**
    * Day of the week.

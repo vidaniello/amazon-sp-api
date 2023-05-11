@@ -30,7 +30,7 @@ import java.io.IOException;
  * The order&#39;s regulated information along with its verification status.
  */
 @ApiModel(description = "The order's regulated information along with its verification status.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-09T15:23:39.079+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-11T14:53:04.283+02:00")
 public class OrderRegulatedInfo {
   @SerializedName("AmazonOrderId")
   private String amazonOrderId = null;

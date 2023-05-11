@@ -5,6 +5,8 @@ import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 
 import com.amazon.SellingPartnerAPIAA.AWSAuthenticationCredentials;
+import com.amazon.SellingPartnerAPIAA.AWSAuthenticationCredentialsProvider;
+import com.amazon.SellingPartnerAPIAA.LWAAuthorizationCredentials;
 import com.amazon.api.SellersApi;
 
 public class Tests {
@@ -29,8 +31,24 @@ public class Tests {
 	public void test1() {
 		try {
 			
-			//AWSAuthenticationCredentials aWSAuthenticationCredentials = AWSAuthenticationCredentials
-			
+			AWSAuthenticationCredentials awsAuthenticationCredentials=AWSAuthenticationCredentials.builder()
+	                  .accessKeyId("*********************")
+	                  .secretKey("***********************")
+	                  .region("us-east-1")
+	                  .build();
+			/*
+			AWSAuthenticationCredentialsProvider awsAuthenticationCredentialsProvider = AWSAuthenticationCredentialsProvider.builder()
+	                  .roleArn("arn:aws:iam::************:role/SellingPartner")
+	                  .roleSessionName("postmanSpApi")
+	                  .build();
+			 
+	        LWAAuthorizationCredentials lwaAuthorizationCredentials = LWAAuthorizationCredentials.builder()
+	                  .clientId("amzn1.application-*********************")
+	                  .clientSecret("***********************************")
+	                  .refreshToken("Atzr|******************************")
+	                  .endpoint("https://api.amazon.com/auth/o2/token")
+	                  .build();
+	        */
 			
 			SellersApi sellersApi = new SellersApi.Builder()
 	                  .awsAuthenticationCredentials(null)

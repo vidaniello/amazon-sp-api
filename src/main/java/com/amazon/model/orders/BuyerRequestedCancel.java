@@ -28,7 +28,7 @@ import java.io.IOException;
  * Information about whether or not a buyer requested cancellation.
  */
 @ApiModel(description = "Information about whether or not a buyer requested cancellation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-09T15:23:39.079+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-11T14:53:04.283+02:00")
 public class BuyerRequestedCancel {
   @SerializedName("IsBuyerRequestedCancel")
   private Boolean isBuyerRequestedCancel = null;

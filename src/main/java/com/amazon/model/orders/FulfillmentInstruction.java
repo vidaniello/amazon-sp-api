@@ -28,7 +28,7 @@ import java.io.IOException;
  * Contains the instructions about the fulfillment like where should it be fulfilled from.
  */
 @ApiModel(description = "Contains the instructions about the fulfillment like where should it be fulfilled from.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-09T15:23:39.079+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-11T14:53:04.283+02:00")
 public class FulfillmentInstruction {
   @SerializedName("FulfillmentSupplySourceId")
   private String fulfillmentSupplySourceId = null;
