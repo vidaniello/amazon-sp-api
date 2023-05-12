@@ -1,5 +1,9 @@
 package com.amazon;
 
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.Properties;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Test;
@@ -29,19 +33,33 @@ public class Tests {
 	
 	@Test
 	public void test1() {
-		try {
+		
+		String propertyFile = "D:/amazonsp/amazonsp_credentials.properties";
+		
+		try (InputStream input = new FileInputStream(propertyFile)) {
 			
-			AWSAuthenticationCredentials awsAuthenticationCredentials=AWSAuthenticationCredentials.builder()
-	                  .accessKeyId("*********************")
-	                  .secretKey("***********************")
-	                  .region("us-east-1")
-	                  .build();
+			
+			
+			Properties propertyes = new Properties();
+			propertyes.load(input);
+			
+			String awsAuthenticationCredentials_accessKeyId = "awsAuthenticationCredentials.accessKeyId";
+			String awsAuthenticationCredentials_secretKey = "awsAuthenticationCredentials.secretKey";
+			String awsAuthenticationCredentials_region = "eu-west-1";
+			
+			String awsAuthenticationCredentials_roleArn = "awsAuthenticationCredentials.roleArn";
+			String awsAuthenticationCredentials_roleSessionName = "awsAuthenticationCredentials.roleSessionName";
+			
+			AWSAuthenticationCredentials awsAuthenticationCredentials = new AWSAuthenticationCredentials()
+	                  .setAccessKeyId(propertyes.getProperty(awsAuthenticationCredentials_accessKeyId))
+	                  .setSecretKey(propertyes.getProperty(awsAuthenticationCredentials_secretKey))
+	                  .setRegion(awsAuthenticationCredentials_region);
+			
+			AWSAuthenticationCredentialsProvider awsAuthenticationCredentialsProvider = new AWSAuthenticationCredentialsProvider()
+	                  .setRoleArn(propertyes.getProperty(awsAuthenticationCredentials_roleArn))
+	                  .setRoleSessionName(propertyes.getProperty(awsAuthenticationCredentials_roleSessionName));
+			
 			/*
-			AWSAuthenticationCredentialsProvider awsAuthenticationCredentialsProvider = AWSAuthenticationCredentialsProvider.builder()
-	                  .roleArn("arn:aws:iam::************:role/SellingPartner")
-	                  .roleSessionName("postmanSpApi")
-	                  .build();
-			 
 	        LWAAuthorizationCredentials lwaAuthorizationCredentials = LWAAuthorizationCredentials.builder()
 	                  .clientId("amzn1.application-*********************")
 	                  .clientSecret("***********************************")
@@ -51,9 +69,9 @@ public class Tests {
 	        */
 			
 			SellersApi sellersApi = new SellersApi.Builder()
-	                  .awsAuthenticationCredentials(null)
+	                  .awsAuthenticationCredentials(awsAuthenticationCredentials)
+	                  .awsAuthenticationCredentialsProvider(awsAuthenticationCredentialsProvider)
 	                  .lwaAuthorizationCredentials(null)
-	                  .awsAuthenticationCredentialsProvider(null)
 	                  .endpoint("https://sellingpartnerapi-na.amazon.com") // use Sandbox URL here if you would like to test your applications without affecting production data.
 	                  .build();
 			

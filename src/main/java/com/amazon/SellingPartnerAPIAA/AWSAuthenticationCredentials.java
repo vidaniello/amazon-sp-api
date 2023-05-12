@@ -40,15 +40,18 @@ public class AWSAuthenticationCredentials {
 		return secretKey;
 	}
     
-    public void setAccessKeyId(String accessKeyId) {
+    public AWSAuthenticationCredentials setAccessKeyId(String accessKeyId) {
 		this.accessKeyId = accessKeyId;
+		return this;
 	}
     
-    public void setRegion(String region) {
+    public AWSAuthenticationCredentials setRegion(String region) {
 		this.region = region;
+		return this;
 	}
     
-    public void setSecretKey(String secretKey) {
+    public AWSAuthenticationCredentials setSecretKey(String secretKey) {
 		this.secretKey = secretKey;
+		return this;
 	}
 }

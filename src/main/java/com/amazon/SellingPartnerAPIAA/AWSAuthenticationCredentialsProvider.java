@@ -33,15 +33,18 @@ public class AWSAuthenticationCredentialsProvider {
 		return roleSessionName;
 	}
     
-    public void setRegion(String region) {
+    public AWSAuthenticationCredentialsProvider setRegion(String region) {
 		this.region = region;
+		return this;
 	}
     
-    public void setRoleArn(String roleArn) {
+    public AWSAuthenticationCredentialsProvider setRoleArn(String roleArn) {
 		this.roleArn = roleArn;
+		return this;
 	}
     
-    public void setRoleSessionName(String roleSessionName) {
+    public AWSAuthenticationCredentialsProvider setRoleSessionName(String roleSessionName) {
 		this.roleSessionName = roleSessionName;
+		return this;
 	}
 }
