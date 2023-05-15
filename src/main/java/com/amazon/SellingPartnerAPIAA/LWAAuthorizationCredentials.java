@@ -63,6 +63,8 @@ public class LWAAuthorizationCredentials {
     }
     
     public LWAClientScopes getScopes() {
+    	if(scopes==null)
+    		scopes = new LWAClientScopes(new HashSet<>());
 		return scopes;
 	}
     
@@ -82,24 +84,29 @@ public class LWAAuthorizationCredentials {
 		return refreshToken;
 	}
     
-    public void setClientId(String clientId) {
+    public LWAAuthorizationCredentials setClientId(String clientId) {
 		this.clientId = clientId;
+		return this;
 	}
     
-    public void setClientSecret(String clientSecret) {
+    public LWAAuthorizationCredentials setClientSecret(String clientSecret) {
 		this.clientSecret = clientSecret;
+		return this;
 	}
     
-    public void setEndpoint(String endpoint) {
+    public LWAAuthorizationCredentials setEndpoint(String endpoint) {
 		this.endpoint = endpoint;
+		return this;
 	}
     
-    public void setRefreshToken(String refreshToken) {
+    public LWAAuthorizationCredentials setRefreshToken(String refreshToken) {
 		this.refreshToken = refreshToken;
+		return this;
 	}
     
-    public void setScopes(LWAClientScopes scopes) {
+    public LWAAuthorizationCredentials setScopes(LWAClientScopes scopes) {
 		this.scopes = scopes;
+		return this;
 	}
 
 }
