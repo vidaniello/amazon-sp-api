@@ -14,6 +14,7 @@ import com.amazon.SellingPartnerAPIAA.AWSAuthenticationCredentialsProvider;
 import com.amazon.SellingPartnerAPIAA.LWAAuthorizationCredentials;
 import com.amazon.api.OrdersV0Api;
 import com.amazon.api.SellersApi;
+import com.amazon.invoker.ApiResponse;
 import com.amazon.model.sellers.GetMarketplaceParticipationsResponse;
 
 public class Tests {
@@ -48,14 +49,14 @@ public class Tests {
 			
 			String awsAuthenticationCredentials_accessKeyId = 		"awsAuthenticationCredentials.accessKeyId";
 			String awsAuthenticationCredentials_secretKey = 		"awsAuthenticationCredentials.secretKey";
-			String awsAuthenticationCredentials_region = 			"eu-west-1";
+			String awsAuthenticationCredentials_region = 			"us-east-1";//"eu-west-1";
 			
 			String awsAuthenticationCredentials_roleArn = 			"awsAuthenticationCredentials.roleArn";
 			String awsAuthenticationCredentials_roleSessionName = 	"awsAuthenticationCredentials.roleSessionName";
 			
-			String lwaAuthorizationCredentials_clientId = 			"lwaAuthorizationCredentials_clientId.clientId";
-			String lwaAuthorizationCredentials_clientSecret = 		"lwaAuthorizationCredentials_clientId.clientSecret";
-			String lwaAuthorizationCredentials_refreshToken = 		"lwaAuthorizationCredentials_clientId.refreshToken";
+			String lwaAuthorizationCredentials_clientId = 			"lwaAuthorizationCredentials.clientId";
+			String lwaAuthorizationCredentials_clientSecret = 		"lwaAuthorizationCredentials.clientSecret";
+			String lwaAuthorizationCredentials_refreshToken = 		"lwaAuthorizationCredentials.refreshToken";
 			String lwaAuthorizationCredentials_endpoint = 			"https://api.amazon.com/auth/o2/token";
 			
 			/**
@@ -87,7 +88,7 @@ public class Tests {
 	                  .endpoint								(sellersApi_endpoint)
 	                  .build();
 			
-			GetMarketplaceParticipationsResponse mppr = sellersApi.getMarketplaceParticipations();
+			ApiResponse<GetMarketplaceParticipationsResponse> mppr = sellersApi.getMarketplaceParticipationsWithHttpInfo();
 			
 			
 			
