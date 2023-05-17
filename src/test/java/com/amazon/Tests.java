@@ -15,6 +15,10 @@ import com.amazon.SellingPartnerAPIAA.LWAAuthorizationCredentials;
 import com.amazon.api.OrdersV0Api;
 import com.amazon.api.SellersApi;
 import com.amazon.invoker.ApiResponse;
+import com.amazon.model.orders.GetOrderAddressResponse;
+import com.amazon.model.orders.GetOrderBuyerInfoResponse;
+import com.amazon.model.orders.GetOrderItemsResponse;
+import com.amazon.model.orders.GetOrderResponse;
 import com.amazon.model.sellers.GetMarketplaceParticipationsResponse;
 
 public class Tests {
@@ -49,7 +53,8 @@ public class Tests {
 			
 			String awsAuthenticationCredentials_accessKeyId = 		"awsAuthenticationCredentials.accessKeyId";
 			String awsAuthenticationCredentials_secretKey = 		"awsAuthenticationCredentials.secretKey";
-			String awsAuthenticationCredentials_region = 			"us-east-1";//"eu-west-1";
+			//String awsAuthenticationCredentials_region = 			"us-east-1";
+			String awsAuthenticationCredentials_region = 			"eu-west-1";
 			
 			String awsAuthenticationCredentials_roleArn = 			"awsAuthenticationCredentials.roleArn";
 			String awsAuthenticationCredentials_roleSessionName = 	"awsAuthenticationCredentials.roleSessionName";
@@ -62,7 +67,8 @@ public class Tests {
 			/**
 			 * Use Sandbox URL here if you would like to test your applications without affecting production data.
 			 */
-			String sellersApi_endpoint = 							"https://sellingpartnerapi-na.amazon.com";
+			//String sellersApi_endpoint = 							"https://sellingpartnerapi-na.amazon.com";
+			String sellersApi_endpoint = 							"https://sellingpartnerapi-eu.amazon.com";
 			
 			AWSAuthenticationCredentials awsAuthenticationCredentials = new AWSAuthenticationCredentials()
 	                  .setAccessKeyId	(propertyes.getProperty(awsAuthenticationCredentials_accessKeyId))
@@ -80,7 +86,7 @@ public class Tests {
 	                  .setRefreshToken		(propertyes.getProperty(lwaAuthorizationCredentials_refreshToken))
 	                  .setEndpoint			(lwaAuthorizationCredentials_endpoint);
 	        
-			
+			/*
 			SellersApi sellersApi = new SellersApi.Builder()
 	                  .awsAuthenticationCredentials			(awsAuthenticationCredentials)
 	                  .awsAuthenticationCredentialsProvider	(awsAuthenticationCredentialsProvider)
@@ -89,8 +95,23 @@ public class Tests {
 	                  .build();
 			
 			ApiResponse<GetMarketplaceParticipationsResponse> mppr = sellersApi.getMarketplaceParticipationsWithHttpInfo();
-			
-			
+			*/
+	        
+	        
+	        OrdersV0Api orders = new OrdersV0Api.Builder()
+	        		.awsAuthenticationCredentials(awsAuthenticationCredentials)
+	        		.awsAuthenticationCredentialsProvider(awsAuthenticationCredentialsProvider)
+	        		.lwaAuthorizationCredentials(lwaAuthorizationCredentials)
+	        		.endpoint(sellersApi_endpoint)
+	        		.build();
+	        
+	        String orderId = System.getProperty("amazonOrderId");
+	        
+	        GetOrderResponse order = orders.getOrder(orderId);
+	        GetOrderBuyerInfoResponse orderBuyerInfo =  orders.getOrderBuyerInfo(orderId);
+	        GetOrderAddressResponse orderAddress = orders.getOrderAddress(orderId);
+	        GetOrderItemsResponse orderItems = orders.getOrderItems(orderId, null);
+	        
 			
 			int i = 0;
 			
