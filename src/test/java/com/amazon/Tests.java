@@ -86,7 +86,7 @@ public class Tests {
 	                  .setRefreshToken		(propertyes.getProperty(lwaAuthorizationCredentials_refreshToken))
 	                  .setEndpoint			(lwaAuthorizationCredentials_endpoint);
 	        
-			/*
+			
 			SellersApi sellersApi = new SellersApi.Builder()
 	                  .awsAuthenticationCredentials			(awsAuthenticationCredentials)
 	                  .awsAuthenticationCredentialsProvider	(awsAuthenticationCredentialsProvider)
@@ -95,9 +95,9 @@ public class Tests {
 	                  .build();
 			
 			ApiResponse<GetMarketplaceParticipationsResponse> mppr = sellersApi.getMarketplaceParticipationsWithHttpInfo();
-			*/
+			
 	        
-	        
+	        /*
 	        OrdersV0Api orders = new OrdersV0Api.Builder()
 	        		.awsAuthenticationCredentials(awsAuthenticationCredentials)
 	        		.awsAuthenticationCredentialsProvider(awsAuthenticationCredentialsProvider)
@@ -111,7 +111,7 @@ public class Tests {
 	        GetOrderBuyerInfoResponse orderBuyerInfo =  orders.getOrderBuyerInfo(orderId);
 	        GetOrderAddressResponse orderAddress = orders.getOrderAddress(orderId);
 	        GetOrderItemsResponse orderItems = orders.getOrderItems(orderId, null);
-	        
+	        */
 			
 			int i = 0;
 			
