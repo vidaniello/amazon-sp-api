@@ -18,6 +18,12 @@ An example of such a file is present in the folder [test/resources](https://gith
 
 ### Use
 
+#### Test environment
+
 [Here](https://developer-docs.amazon.com/sp-api-blog/docs/automate-your-sp-api-calls-using-java-sdk#step-5-connect-to-the-selling-partner-api-using-the-generated-java-sdk) it is possible to read an example of using the amazon sp API, but since there were bugs and errors, this library presents the example in a slightly different way, that is, by viewing the class [Tests.java](https://github.com/vidaniello/amazon-sp-api/blob/main/src/test/java/com/amazon/Tests.java) you will see an example for calling `getMarketplaceParticipation` and a series of examples for calling objects related to a 'order amazon.
 
 To see an example of reading amazon order, start the test with VM variable `-DamazonOrderId=XXX-XXXXXXX-XXXXXXX` like this.
+
+#### Production environment
+
+In production, my advice is to do as you think best, being careful to keep the access credentials well and securely.
