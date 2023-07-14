@@ -94,10 +94,10 @@ public class Tests {
 	                  .endpoint								(sellersApi_endpoint)
 	                  .build();
 			
-			ApiResponse<GetMarketplaceParticipationsResponse> mppr = sellersApi.getMarketplaceParticipationsWithHttpInfo();
+			//ApiResponse<GetMarketplaceParticipationsResponse> mppr = sellersApi.getMarketplaceParticipationsWithHttpInfo();
 			
 	        
-	        /*
+	        
 	        OrdersV0Api orders = new OrdersV0Api.Builder()
 	        		.awsAuthenticationCredentials(awsAuthenticationCredentials)
 	        		.awsAuthenticationCredentialsProvider(awsAuthenticationCredentialsProvider)
@@ -111,7 +111,7 @@ public class Tests {
 	        GetOrderBuyerInfoResponse orderBuyerInfo =  orders.getOrderBuyerInfo(orderId);
 	        GetOrderAddressResponse orderAddress = orders.getOrderAddress(orderId);
 	        GetOrderItemsResponse orderItems = orders.getOrderItems(orderId, null);
-	        */
+	        
 			
 			int i = 0;
 			
