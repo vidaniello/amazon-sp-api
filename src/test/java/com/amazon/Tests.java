@@ -54,26 +54,30 @@ public class Tests {
 			String awsAuthenticationCredentials_accessKeyId = 		"awsAuthenticationCredentials.accessKeyId";
 			String awsAuthenticationCredentials_secretKey = 		"awsAuthenticationCredentials.secretKey";
 			//String awsAuthenticationCredentials_region = 			"us-east-1";
-			String awsAuthenticationCredentials_region = 			"eu-west-1";
-			
+			String awsAuthenticationCredentials_region = 			"awsAuthenticationCredentials.region";
+																			
 			String awsAuthenticationCredentials_roleArn = 			"awsAuthenticationCredentials.roleArn";
 			String awsAuthenticationCredentials_roleSessionName = 	"awsAuthenticationCredentials.roleSessionName";
 			
 			String lwaAuthorizationCredentials_clientId = 			"lwaAuthorizationCredentials.clientId";
 			String lwaAuthorizationCredentials_clientSecret = 		"lwaAuthorizationCredentials.clientSecret";
 			String lwaAuthorizationCredentials_refreshToken = 		"lwaAuthorizationCredentials.refreshToken";
-			String lwaAuthorizationCredentials_endpoint = 			"https://api.amazon.com/auth/o2/token";
+			String lwaAuthorizationCredentials_endpoint = 			"lwaAuthorizationCredentials.endpoint";
 			
 			/**
 			 * Use Sandbox URL here if you would like to test your applications without affecting production data.
 			 */
 			//String sellersApi_endpoint = 							"https://sellingpartnerapi-na.amazon.com";
-			String sellersApi_endpoint = 							"https://sellingpartnerapi-eu.amazon.com";
+			String sellersApi_endpoint = 							propertyes.getProperty("sellersApi.endpoint");
+			
+			
+			
+			
 			
 			AWSAuthenticationCredentials awsAuthenticationCredentials = new AWSAuthenticationCredentials()
 	                  .setAccessKeyId	(propertyes.getProperty(awsAuthenticationCredentials_accessKeyId))
 	                  .setSecretKey		(propertyes.getProperty(awsAuthenticationCredentials_secretKey))
-	                  .setRegion		(awsAuthenticationCredentials_region);
+	                  .setRegion		(propertyes.getProperty(awsAuthenticationCredentials_region));
 			
 			AWSAuthenticationCredentialsProvider awsAuthenticationCredentialsProvider = new AWSAuthenticationCredentialsProvider()
 	                  .setRoleArn			(propertyes.getProperty(awsAuthenticationCredentials_roleArn))
@@ -84,9 +88,15 @@ public class Tests {
 	                  .setClientId			(propertyes.getProperty(lwaAuthorizationCredentials_clientId))
 	                  .setClientSecret		(propertyes.getProperty(lwaAuthorizationCredentials_clientSecret))
 	                  .setRefreshToken		(propertyes.getProperty(lwaAuthorizationCredentials_refreshToken))
-	                  .setEndpoint			(lwaAuthorizationCredentials_endpoint);
+	                  .setEndpoint			(propertyes.getProperty(lwaAuthorizationCredentials_endpoint));
 	        
 			
+	        
+	        
+	        
+	        
+	        
+	        
 			SellersApi sellersApi = new SellersApi.Builder()
 	                  .awsAuthenticationCredentials			(awsAuthenticationCredentials)
 	                  .awsAuthenticationCredentialsProvider	(awsAuthenticationCredentialsProvider)
