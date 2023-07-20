@@ -16,6 +16,16 @@ For the test environment, a file named `amazonsp_credentials.properties` must be
 
 An example of such a file is present in the folder [test/resources](https://github.com/vidaniello/amazon-sp-api/tree/main/src/test/resources/amazonsp_credentials.properties). Copy and paste it into the user folder, then obviously set out all the variables needed to authenticate for the use of the API.
 
+Attention! Make sure that dependency resolution causes the com.google.code.gson:gson library to be calculated at at least varsion 2.8.9.
+```
+        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.9</version>
+        </dependency>
+```
+
 ### Use
 
 #### Test environment
