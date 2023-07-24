@@ -26,6 +26,21 @@ Attention! Make sure that dependency resolution causes the com.google.code.gson:
         </dependency>
 ```
 
+Also these apache dependencies are needed at least this version:
+
+```
+			<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpclient</artifactId>
+				<version>4.5.13</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpcore</artifactId>
+				<version>4.4.13</version>
+			</dependency>
+```
+
 ### Use
 
 #### Test environment
