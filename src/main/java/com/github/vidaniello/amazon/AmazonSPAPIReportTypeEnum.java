@@ -1,7 +1,8 @@
 package com.github.vidaniello.amazon;
 /**
  * 
- * <a href="https://developer-docs.amazon.com/sp-api/docs/report-type-values">Amazon link site</a>
+ * <a href="https://developer-docs.amazon.com/sp-api/docs/report-type-values">Amazon link site</a><br>
+ * All report attributes <a href="https://developer-docs.amazon.com/sp-api/docs/reports-attributes">here</a>
  * @author Vincenzo D'Aniello (vidaniello@gmail.com)
  *
  */

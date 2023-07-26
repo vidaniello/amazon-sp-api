@@ -1,6 +1,8 @@
 package com.github.vidaniello.amazon;
 /**
- * <a href="https://developer-docs.amazon.com/sp-api/docs/feed-type-values">Amazon link site</a>
+ * <a href="https://developer-docs.amazon.com/sp-api/docs/feed-type-values">Amazon link site</a><br>
+ * All feed attributes <a href="https://developer-docs.amazon.com/sp-api/docs/feeds-attributes">here</a><br>
+ * Order feeds attributes: <a href="https://developer-docs.amazon.com/sp-api/docs/order-feeds-attributes">here</a><br>
  * @author Vincenzo D'Aniello (vidaniello@gmail.com)
  *
  */
@@ -30,6 +32,9 @@ POST_INVOICE_CONFIRMATION_DATA,
 POST_EXPECTED_SHIP_DATE_SOD,
 POST_FLAT_FILE_ORDER_ACKNOWLEDGEMENT_DATA,
 POST_FLAT_FILE_PAYMENT_ADJUSTMENT_DATA,
+/**
+ * description <a href="https://developer-docs.amazon.com/sp-api/docs/order-feeds-attributes#post_flat_file_fulfillment_data">link here</a><br>
+ */
 POST_FLAT_FILE_FULFILLMENT_DATA,
 POST_EXPECTED_SHIP_DATE_SOD_FLAT_FILE,
 
