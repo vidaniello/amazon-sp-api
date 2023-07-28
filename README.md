@@ -39,6 +39,11 @@ Also these apache dependencies are needed at least this version:
 				<artifactId>httpcore</artifactId>
 				<version>4.4.13</version>
 			</dependency>
+			<dependency>
+			    <groupId>joda-time</groupId>
+			    <artifactId>joda-time</artifactId>
+			    <version>2.8.1</version>
+			</dependency>			
 ```
 
 ### Use
