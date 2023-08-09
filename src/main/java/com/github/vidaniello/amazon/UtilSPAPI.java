@@ -47,6 +47,31 @@ public class UtilSPAPI {
 
 	}
 	
+	public static void downloadForFeed(
+			String url, 
+			com.amazon.model.feeds.FeedDocument.CompressionAlgorithmEnum compressionAlgorithm, 
+			OutputStream outStream
+	) throws Exception {
+		
+		if(compressionAlgorithm!=null)
+			download(url, compressionAlgorithm.getValue(), outStream);
+		else
+			download(url, null, outStream);
+	}
+	
+	public static void downloadForReport(
+			String url, 
+			com.amazon.model.reports.ReportDocument.CompressionAlgorithmEnum compressionAlgorithm, 
+			OutputStream outStream
+	) throws Exception {
+		
+		if(compressionAlgorithm!=null)
+			download(url, compressionAlgorithm.getValue(), outStream);
+		else
+			download(url, null, outStream);
+	}
+	
+	
 	/**
 	 * Download and optionally decompress the document retrieved from the given url.<br>
 	 * Example finded <a href="https://developer-docs.amazon.com/sp-api/docs/feeds-api-v2021-06-30-use-case-guide">here</a>
